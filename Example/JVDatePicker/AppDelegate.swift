@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  JVDatePicker
 //
-//  Created by horvithiea2@gmail.com on 08/26/2021.
-//  Copyright (c) 2021 horvithiea2@gmail.com. All rights reserved.
+//  Created by John Vithiea on 08/26/2021.
+//  Copyright (c) 2021 Vithiea Hor All rights reserved.
 //
 
 import UIKit

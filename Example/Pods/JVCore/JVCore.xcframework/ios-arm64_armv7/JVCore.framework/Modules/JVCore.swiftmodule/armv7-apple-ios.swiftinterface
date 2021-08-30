@@ -1,0 +1,266 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-module-flags: -target armv7-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name JVCore
+import Foundation
+@_exported import JVCore
+import Swift
+import UIKit
+extension UILabel {
+  public func underlineText()
+  public func underlineText(_ texts: [Swift.String], color: UIKit.UIColor = UIColor(red: 0, green: 0, blue: 0.933, alpha: 1.0), link: Swift.String? = nil)
+  public func setLineSpace(_ space: CoreGraphics.CGFloat = 2.0)
+}
+extension UIApplication {
+  public func setRootViewController(_ id: Swift.String, storyboard: UIKit.UIStoryboard = UIStoryboard.main)
+  public func reloadApp()
+  public func increaseNotificationBadge()
+  public func decreaseNotificationBadge()
+  public func getNotificationBadges() -> Swift.String
+  public func resetNotificationBadge()
+}
+extension FileManager {
+  @discardableResult
+  public func caches(_ filename: Swift.String, content: Swift.String) -> Swift.Bool
+  public func getCachedContents(_ filename: Swift.String) -> Swift.String
+  public func getCachedPathFor(_ filename: Swift.String) -> Foundation.URL
+  public func getCachePath() -> Foundation.URL
+  public func getContents(_ path: Foundation.URL) -> Swift.String
+  @discardableResult
+  public func setDateModified(_ date: Foundation.Date, fileAtPath: Swift.String) -> Swift.Bool
+  public func getDateModified(_ path: Swift.String) -> Swift.String
+  @discardableResult
+  public func deletes(path: Swift.String) -> Swift.Bool
+}
+public let APP_NAME: Swift.String
+public let APP_BUILD: Swift.String
+public let APP_ID: Swift.String
+public let APP_VERSION: Swift.String
+public var APP_BUILD_NUMBER: Swift.String {
+  get
+}
+public var DEVICE_ID: Swift.String {
+  get
+}
+extension UITextField {
+  public var isBlank: Swift.Bool {
+    get
+  }
+  public func trimText() -> Swift.String
+  public func setPlaceholder(color: UIKit.UIColor)
+}
+extension String {
+  public var toInt: Swift.Int {
+    get
+  }
+  public var toInt8: Swift.Int8 {
+    get
+  }
+  public var toFloat: Swift.Float {
+    get
+  }
+  public var toDouble: Swift.Double {
+    get
+  }
+  public var isBlank: Swift.Bool {
+    get
+  }
+  public var isNumeric: Swift.Bool {
+    get
+  }
+  public var isValidEmail: Swift.Bool {
+    get
+  }
+  public var stringNumeric: Swift.String {
+    get
+  }
+  public var trim: Swift.String {
+    get
+  }
+  public var htmlToAttributedString: Foundation.NSAttributedString? {
+    get
+  }
+  public var firstUppercased: Swift.String {
+    get
+  }
+  public func char(atIndex: Swift.Int) -> Swift.Character
+  public func index(of string: Swift.String) -> Swift.Int
+  public func toDate(format: Swift.String = "yyyy-MM-dd") -> Foundation.Date?
+  public func reformatDate(oldFormat: Swift.String = "yyyy-MM-dd", newFormat: Swift.String) -> Swift.String
+}
+public enum ErrorType {
+  case data
+  case network
+  case general
+  case none
+  public init()
+  public static func == (a: JVCore.ErrorType, b: JVCore.ErrorType) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public struct MyError {
+  public let message: Swift.String
+  public let code: Swift.Int
+  public let title: Swift.String
+  public let url: Swift.String
+  public let type: JVCore.ErrorType
+  public init(title: Swift.String = "", url: Swift.String = "", code: Swift.Int, msg: Swift.String, type: JVCore.ErrorType = ErrorType())
+  public init(url: Swift.String, error: Swift.Error)
+  public func log(title: Swift.String = "")
+}
+extension UINavigationController {
+  public func enableTranparent()
+  public func disableTranparent(barColor: UIKit.UIColor)
+  public func controller<T>(type: T.Type) -> UIKit.UIViewController
+}
+extension UINavigationItem {
+  public func setTitle(_ title: Swift.String, color: UIKit.UIColor, font: UIKit.UIFont)
+}
+extension Collection {
+  public subscript(safe index: Self.Index) -> Self.Element? {
+    get
+  }
+  public subscript(safeString index: Self.Index) -> Swift.String {
+    get
+  }
+  public subscript(safeArray index: Self.Index) -> Swift.Array<Any> {
+    get
+  }
+}
+public func getValuePlist(name: Swift.String, key: Swift.String, bundle: Foundation.Bundle? = Bundle.main) -> Any?
+public func removeShadowNavigationBar()
+public struct JVDate {
+  public let date: Foundation.Date?
+  public var dateTime: Swift.String {
+    get
+  }
+  public var shortDate: Swift.String {
+    get
+  }
+  public var shortMonth: Swift.String {
+    get
+  }
+  public func format(_ format: Swift.String) -> Swift.String
+  public init()
+  public init(_ date: Foundation.Date)
+  public init(_ string: Swift.String)
+  public init(short: Swift.String)
+}
+extension Date {
+  public func next(_ weekday: Foundation.Date.Weekday, considerToday: Swift.Bool = false) -> Foundation.Date
+  public func previous(_ weekday: Foundation.Date.Weekday, considerToday: Swift.Bool = false) -> Foundation.Date
+  public func get(_ direction: Foundation.Date.SearchDirection, _ weekDay: Foundation.Date.Weekday, considerToday consider: Swift.Bool = false) -> Foundation.Date
+  public func getWeekDaysInEnglish() -> [Swift.String]
+  public enum Weekday : Swift.String {
+    case monday, tuesday, wednesday, thursday, friday, saturday, sunday
+    public typealias RawValue = Swift.String
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum SearchDirection {
+    case Next
+    case Previous
+    public var calendarSearchDirection: Foundation.Calendar.SearchDirection {
+      get
+    }
+    public static func == (a: Foundation.Date.SearchDirection, b: Foundation.Date.SearchDirection) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+}
+extension Date {
+  public func toString(format: Swift.String = "yyyy-MM-dd") -> Swift.String
+  public func isBetweenDate(_ beginDate: Foundation.Date?, andDate endDate: Foundation.Date?) -> Swift.Bool
+  public func dateOnly(format: Swift.String = "yyyy-MM-dd") -> Foundation.Date
+}
+public struct Device {
+  public static let isPhone: Swift.Bool
+  public static let isPad: Swift.Bool
+  public static let version: Swift.String
+  public static let model: Swift.String
+}
+@objc @_inheritsConvenienceInitializers public class JVKeychain : ObjectiveC.NSObject {
+  public class func defaultQuery() -> [Swift.String : Any]
+  public class func delete(key: Swift.String)
+  public class func save(_ string: Swift.String, forKey key: Swift.String) -> Swift.Bool
+  @discardableResult
+  public class func save(_ value: Swift.Bool, forKey key: Swift.String) -> Swift.Bool
+  @discardableResult
+  public class func save(_ value: Foundation.Data, forKey key: Swift.String) -> Swift.Bool
+  public class func loadData(key: Swift.String) -> Foundation.Data?
+  public class func loadString(key: Swift.String) -> Swift.String
+  public class func loadBool(key: Swift.String) -> Swift.Bool
+  @objc deinit
+  @objc override dynamic public init()
+}
+extension UIStoryboard {
+  public static var main: UIKit.UIStoryboard {
+    get
+  }
+}
+extension UIView {
+  public var parentController: UIKit.UIViewController? {
+    get
+  }
+  public func rounded()
+  public func rounds(radius: CoreGraphics.CGFloat, borderColor: UIKit.UIColor = UIColor.clear, width: CoreGraphics.CGFloat = 1.0)
+  public func addBorder(color: UIKit.UIColor, width: CoreGraphics.CGFloat = 1.0)
+  public func addShadow(offset: CoreGraphics.CGSize, radius: CoreGraphics.CGFloat = 1.0, opacity: Swift.Float = 0.3)
+  public func indexPathIn(tableView: UIKit.UITableView) -> Foundation.IndexPath?
+  public func indexPathIn(collectionView: UIKit.UICollectionView) -> Foundation.IndexPath?
+  public func fillParent()
+  public func constraintToView(sndView: UIKit.UIView, left: CoreGraphics.CGFloat, right: CoreGraphics.CGFloat, top: CoreGraphics.CGFloat, bottom: CoreGraphics.CGFloat)
+}
+extension UIImage {
+  public func addBorder(width: CoreGraphics.CGFloat = 1.0, color: UIKit.UIColor = .lightGray) -> UIKit.UIImage?
+  public func color(_ color: UIKit.UIColor) -> UIKit.UIImage
+  public enum CompressionQuality : CoreGraphics.CGFloat {
+    case lowest
+    case low
+    case medium
+    case high
+    case highest
+    public typealias RawValue = CoreGraphics.CGFloat
+    public init?(rawValue: CoreGraphics.CGFloat)
+    public var rawValue: CoreGraphics.CGFloat {
+      get
+    }
+  }
+  public func compress(_ quality: UIKit.UIImage.CompressionQuality) -> UIKit.UIImage?
+  public func compressData(_ quality: UIKit.UIImage.CompressionQuality) -> Foundation.Data?
+  public func cached(_ filename: Swift.String)
+}
+extension UIButton {
+  public func sendImageToRight()
+}
+extension UIViewController {
+  public static var className: Swift.String {
+    get
+  }
+  public class func instance() -> UIKit.UIViewController
+  public class func instance(id: Swift.String, storyboard: UIKit.UIStoryboard = UIStoryboard.main) -> UIKit.UIViewController
+  public func hideKeyboardWhenTappedAround()
+}
+@objc @_inheritsConvenienceInitializers public class JVAlertController : UIKit.UIAlertController {
+  public class func show(_ msg: Swift.String)
+  public class func show(title: Swift.String, message: Swift.String)
+  public func show()
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+extension JVCore.ErrorType : Swift.Equatable {}
+extension JVCore.ErrorType : Swift.Hashable {}
+extension Foundation.Date.Weekday : Swift.Equatable {}
+extension Foundation.Date.Weekday : Swift.Hashable {}
+extension Foundation.Date.Weekday : Swift.RawRepresentable {}
+extension Foundation.Date.SearchDirection : Swift.Equatable {}
+extension Foundation.Date.SearchDirection : Swift.Hashable {}
+extension UIKit.UIImage.CompressionQuality : Swift.Equatable {}
+extension UIKit.UIImage.CompressionQuality : Swift.Hashable {}
+extension UIKit.UIImage.CompressionQuality : Swift.RawRepresentable {}

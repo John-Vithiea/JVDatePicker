@@ -1,0 +1,23 @@
+PODS:
+  - JVCore (0.1.0)
+  - JVDatePicker (0.1.0)
+
+DEPENDENCIES:
+  - JVCore (= 0.1.0)
+  - JVDatePicker (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - JVCore
+
+EXTERNAL SOURCES:
+  JVDatePicker:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  JVCore: 2a324a7c7f9e19e05484099031eb7a413cb2ae0c
+  JVDatePicker: ab688b38e09bd96aabd7a64fdfbfdeb5ca9bc465
+
+PODFILE CHECKSUM: 8450fa6a85ad23357e9ad472da155ed880f01027
+
+COCOAPODS: 1.10.1

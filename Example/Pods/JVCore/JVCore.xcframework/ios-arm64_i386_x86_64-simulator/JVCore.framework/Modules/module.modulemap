@@ -1,0 +1,11 @@
+framework module JVCore {
+  umbrella header "JVCore.h"
+
+  export *
+  module * { export * }
+}
+
+module JVCore.Swift {
+    header "JVCore-Swift.h"
+    requires objc
+}

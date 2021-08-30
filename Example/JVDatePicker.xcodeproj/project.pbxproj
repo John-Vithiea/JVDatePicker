@@ -40,11 +40,11 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6E3A168F3BF0C25DF6948124 /* Pods-JVDatePicker_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JVDatePicker_Example.debug.xcconfig"; path = "Target Support Files/Pods-JVDatePicker_Example/Pods-JVDatePicker_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		752540521D9184E4C66EC5E2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		752540521D9184E4C66EC5E2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		7F9EA698AB0ED5D9CA128CD7 /* Pods_JVDatePicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JVDatePicker_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98D8F0360EC6ED748D95F49D /* Pods-JVDatePicker_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JVDatePicker_Tests.release.xcconfig"; path = "Target Support Files/Pods-JVDatePicker_Tests/Pods-JVDatePicker_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		A83630E3189D55E3E5B82BFC /* JVDatePicker.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = JVDatePicker.podspec; path = ../JVDatePicker.podspec; sourceTree = "<group>"; };
-		A8CB02DA6499B2F2A7F3FA8F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		A83630E3189D55E3E5B82BFC /* JVDatePicker.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JVDatePicker.podspec; path = ../JVDatePicker.podspec; sourceTree = "<group>"; };
+		A8CB02DA6499B2F2A7F3FA8F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		B9B948C2F67ECA4FD37DE041 /* Pods-JVDatePicker_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JVDatePicker_Tests.debug.xcconfig"; path = "Target Support Files/Pods-JVDatePicker_Tests/Pods-JVDatePicker_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F3C908AD161C74AD8C7639EA /* Pods-JVDatePicker_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JVDatePicker_Example.release.xcconfig"; path = "Target Support Files/Pods-JVDatePicker_Example/Pods-JVDatePicker_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,7 +147,6 @@
 				B9B948C2F67ECA4FD37DE041 /* Pods-JVDatePicker_Tests.debug.xcconfig */,
 				98D8F0360EC6ED748D95F49D /* Pods-JVDatePicker_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -270,10 +270,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-JVDatePicker_Example/Pods-JVDatePicker_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/JVDatePicker/JVDatePicker.framework",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/JVCore/JVCore.framework/JVCore",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVDatePicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVCore.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -419,7 +421,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -465,7 +467,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
