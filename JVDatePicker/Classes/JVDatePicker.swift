@@ -33,8 +33,8 @@ fileprivate let kAnimationTime: Double = 0.25
 public class JVDatePicker: UIView {
     @IBOutlet private var contentView:UIView!
     
-    @IBOutlet weak var datePicker: UIDatePicker!
-    @IBOutlet weak var btnDone: UIBarButtonItem!
+    @IBOutlet public weak var datePicker: UIDatePicker!
+    @IBOutlet public weak var btnDone: UIBarButtonItem!
     
     @IBOutlet private weak var viwDim: UIView!
     @IBOutlet private weak var viwPickerContainer: UIView!
