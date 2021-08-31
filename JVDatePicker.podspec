@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JVDatePicker'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'An easy way to implement date picker with flyin animation from bottom of screen.'
 
 # This description is used to generate tags and improve search results.
